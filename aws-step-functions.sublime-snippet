@@ -1,0 +1,17 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+{
+	"StartAt": "${1:START_STATE_NAME}",
+	"Comment": "${2:COMMENT}",
+	"Version": "${3:VERSION}",
+	"States": {
+		$0
+	}
+}
+]]></content>
+	<tabTrigger>stepfn</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function</description>
+</snippet>

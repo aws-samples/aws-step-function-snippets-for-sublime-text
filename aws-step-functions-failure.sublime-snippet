@@ -1,0 +1,14 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Fail",
+	"Error": "${2:ERROR_CODE}",
+	"CAUSE": "${3:ERROR_MESSAGE}"
+},
+]]></content>
+	<tabTrigger>stepfail</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Failure State</description>
+</snippet>

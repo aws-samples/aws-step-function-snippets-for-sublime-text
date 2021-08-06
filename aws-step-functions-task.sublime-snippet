@@ -1,0 +1,18 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Task",
+	"Resource": "arn:aws:${2:RESOURCE_ARN}",
+	"ResultPath": "\$.${3:<OPTIONAL> RESULT_PATH}",
+	"Next": "${4:NEXT_STATE_NAME}",
+	"Parameters": {
+		"${5:KEY1}": "${6:VAL1}"
+	}
+},
+]]></content>
+	<tabTrigger>steptask</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Task State</description>
+</snippet>

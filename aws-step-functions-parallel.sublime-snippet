@@ -1,0 +1,27 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Parallel",
+	"Branches": [
+		{
+	      "StartAt": "${2:START_STATE_NAME}",
+	      "States": {
+	        ${3:STATE1}
+	      }
+	    },
+	    {
+	      "StartAt": "${4:START_STATE_NAME}",
+	      "States": {
+	        ${5:STATE2} 
+	      }
+	    }
+	],
+	"Next": "${6:NEXT_STATE_NAME}"
+},
+]]></content>
+	<tabTrigger>stepparallel</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Parallel State</description>
+</snippet>

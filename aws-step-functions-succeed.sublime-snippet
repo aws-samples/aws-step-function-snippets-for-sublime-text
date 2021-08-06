@@ -1,0 +1,12 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Succeed"
+},
+]]></content>
+	<tabTrigger>stepsucceed</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Succeed State</description>
+</snippet>

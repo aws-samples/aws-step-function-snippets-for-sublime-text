@@ -1,0 +1,17 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Wait",
+	"Seconds": ${2:NUMBER_OF_SECONDS -OR-},
+	"SecondsPath": "\$.${3:SECONDS_REFERENCE_PATH -OR-}",
+	"Timestamp": "${4:TIMESTAMP -OR-}",
+	"TimestampPath": "\$.${5:TIMESTAMP_REFERENCE_PATH}",
+	"Next": "NEXT_STATE_NAME"
+},
+]]></content>
+	<tabTrigger>stepwait</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Wait State</description>
+</snippet>

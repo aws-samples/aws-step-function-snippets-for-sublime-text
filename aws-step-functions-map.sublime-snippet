@@ -1,0 +1,32 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+  "Type": "Map",
+  "InputPath": "\$.${2:INPUT_PATH}",
+  "ItemsPath": "\$.${3:ITEMS_PATH}",
+  "MaxConcurrency": ${4:MAX_CONCURRENCY},
+  "Parameters": {
+    "${5:<OPTIONAL>KEY1}.\$": "${6:VALUE1}",
+    "${7:<OPTIONAL>KEY2}.\$": "${8:VALUE2}"
+  },
+  "Iterator": {
+    "StartAt": "${9:STARTING_STATE_NAME}",
+    "States": {
+      "${10:STARTING_STATE_NAME}": {
+        "Type": "Task",
+        "Resource": "arn:aws:${11:RESOURCE_ARN}",
+        "Next": "${12:NEXT_STATE -OR-}",
+        "End": true
+      }
+    }
+  },
+  "ResultPath": "\$.${13:RESULT_PATH}",
+  "End": true
+},
+]]></content>
+	<tabTrigger>stepmap</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Map State</description>
+</snippet>

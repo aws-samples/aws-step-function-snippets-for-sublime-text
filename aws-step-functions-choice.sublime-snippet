@@ -1,0 +1,25 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Choice",
+	"Choice": [
+		{
+			"Variable": "\$.${2:VAR1}",
+			"${3:COMPARISON_OPERATOR}": "${4:COMPARISON VALUE}",
+			"Next": "${5:STATE_NAME_IF_CHOICE_SELECTED}"
+		},
+		{
+			"Variable": "\$.${6:VAR2}",
+			"${7:COMPARISON_OPERATOR}": "${8:COMPARISON VALUE}",
+			"Next": "${9:STATE_NAME_IF_CHOICE_SELECTED}"
+		},
+	],
+	"Default": "${10:DEFAULT_STATE_NAME}"
+},
+]]></content>
+	<tabTrigger>stepchoice</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Choice State</description>
+</snippet>

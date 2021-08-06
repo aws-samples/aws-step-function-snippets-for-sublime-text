@@ -1,0 +1,15 @@
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<snippet>
+	<content><![CDATA[
+"${1:STATE_NAME}": {
+	"Type": "Pass",
+	"Result": "${2:OPTIONAL}",
+	"ResultPath": "\$.${3:OPTIONAL}",
+	"Next": "${4:NEXT_STATE_NAME}"
+},
+]]></content>
+	<tabTrigger>steppass</tabTrigger>
+	<scope>source.json</scope>
+	<description>AWS Step Function Pass State</description>
+</snippet>
